@@ -3,6 +3,10 @@ html, body{
     color: #ffffff;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 html, body{
     margin: 0;
     padding: 0;
@@ -58,9 +62,10 @@ html, body{
  }
 
 .channel-list{
+    text-align: center;
+    margin-top: 100vh;
     background-color: #000;
-    height: 100vh;
-    overflow-y: scroll;
+    z-index: 1;
 }
 
 .channel-btn{
@@ -71,25 +76,24 @@ html, body{
     background-size: 100% auto;
 	background-position: center;
 	background-repeat: no-repeat;
-    display: block;
+    display: inline;
     margin: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+    width: 100px;
     height: 80px;
+    color: white;
     font-size: 0;
 }
 
 .focusable:focus {
     border-radius: 10px !important;
-    border: 3px solid #3a3a3c;
+    border: 3px solid rgba(255, 0, 0, 1);
     transform: scale(1.1, 1.1);
     outline: none;
 }
 
 .focusable:hover{
     border-radius: 10px !important;
-    border: 3px solid #3a3a3c;
+    border: 3px solid rgba(255, 0, 0, 1);
     transform: scale(1.1, 1.1);
 }
 
@@ -117,4 +121,16 @@ html, body{
     padding: 0;
     height: 20px;
     width: auto;
+}
+
+.tv-display{
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+.dsp-none{
+    display: none;
 }

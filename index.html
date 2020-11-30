@@ -20,52 +20,79 @@
     </script>
   </head>
   <body>
+    <div class="leftbox" width="0">
+      <div class="focusable" style="width: 1px !important; z-index: 999999999;" id="topV"></div>
+    </div>
     <div class="container-fluid">
-        <div class="row leftbox">
-            <div class="col-2 channel-list bg-green scroll">
+        <div class="row">
+            <div class="col-12 channel-list leftbox" id="channelList">
               <button id="syritv" class="syritv channel-btn focusable">Syri TV</button>
               <button id="tch" class="tch channel-btn focusable">Top Channel</button>
               <button id="klan" class="klan channel-btn focusable">Klan HD</button>
+              <button id="orahd" class="orahd channel-btn focusable">Ora HD</button>
+              <button id="oranews" class="oranews channel-btn focusable">Ora News</button>
               <button id="topnews" class="topnews channel-btn focusable">Top News</button>
               <button id="abcnews" class="abcnews channel-btn focusable">ABC News</button>
-              <button id="news24" class="news24 channel-btn focusable">News 24</button>
-              <button id="oranews" class="oranews channel-btn focusable">Ora News</button>
+              <button id="news24" class="news24 channel-btn focusable" onclick="scrollToTop()">News 24</button>
+              <button id="faxnews" class="faxnews channel-btn focusable">FAX News</button>
+              <button id="a2cnn" class="a2cnn channel-btn focusable">A2 CNN</button>
+              <button id="euronewsal" class="euronewsal channel-btn focusable">Euronews AL</button>
+              <button id="t7hd" class="t7hd channel-btn focusable">T7 HD</button>
+              <button id="ntv" class="ntv channel-btn focusable">NTV</button>
               <button id="vizionplus" class="vizionplus channel-btn focusable">Vizion Plus</button>
               <button id="reporttv" class="a1report channel-btn focusable">Report TV</button>
+              <button id="scantv" class="scantv channel-btn focusable">SCAN TV</button>
+              <button id="tematv" class="tematv channel-btn focusable">Tema TV</button>
+              <button id="tvdukagjini" class="tvdukagjini channel-btn focusable">TV Dukagjini</button>
               <button id="rtsh" class="rtsh channel-btn focusable">RTSH</button>
               <button id="klanplus" class="klanplus channel-btn focusable">Klan Plus</button>
               <button id="ktv" class="ktv channel-btn focusable">KTV</button>
               <button id="21rtv" class="rtv channel-btn focusable">21 RTV</button>
-              <button id="rtk" class="rtk channel-btn focusable">RTK</button>
               <button id="klankosova" class="klankosova channel-btn focusable">Klan Kosova</button>
               <button id="alsatm" class="alsatm channel-btn focusable">Alsat M</button>
+              <button id="zjarrtv" class="zjarrtv channel-btn focusable">Zjarr TV</button>
               <button id="ss1" class="ss channel-btn focusable">Supersport 1</button>
               <button id="ss2" class="ss channel-btn focusable">Supersport 2</button>
               <button id="ss3" class="ss channel-btn focusable">Supersport 3</button>
               <button id="ss4" class="ss channel-btn focusable">Supersport 4</button>
-              <button id="intv" class="intv channel-btn focusable">IN TV</button>
-              <button id="tringhisori" class="tringhisori channel-btn focusable">Tring Histori</button>
-              <button id="tringplanet" class="tringplanet channel-btn focusable">Tring Planet</button>
-              <button id="filmhits" class="filmhits channel-btn focusable">Film Hits</button>
+              <button id="ss5" class="ss channel-btn focusable">Supersport 5</button>
+              <button id="ss6" class="ss channel-btn focusable">Supersport 6</button>
+              <button id="tringsport1" class="tringsport1 channel-btn focusable">Tring Sport 1</button>
+              <button id="tringsport2" class="tringsport2 channel-btn focusable">Tring Sport 2</button>
+              <button id="tringsport3" class="tringsport3 channel-btn focusable">Tring Sport 3</button>
+              <button id="tringsport4" class="tringsport4 channel-btn focusable">Tring Sport 4</button>
+              <button id="rtshsport" class="rtshsport channel-btn focusable">RTSH Sport</button>
+              <button id="realmadridtv" class="realmadridtv channel-btn focusable">Real Madrid TV</button>
+              <button id="dubairacing" class="dubairacing channel-btn focusable">Dubai Racing</button>
+              <button id="huntchannel" class="huntchannel channel-btn focusable">HUNT Channel</button>
+              <button id="redbulltv" class="redbulltv channel-btn focusable">REDBULL TV</button>
+              <button id="allsports" class="allsports channel-btn focusable">All Sports</button>
+              <button id="filmautor" class="filmautor channel-btn focusable">Film Autor</button>
               <button id="filmdrame" class="filmdrame channel-btn focusable">Film Drame</button>
               <button id="filmaksion" class="filmaksion channel-btn focusable">Film Aksion</button>
               <button id="filmnjehd" class="filmnjehd channel-btn focusable">Film 1 HD</button>
               <button id="filmdyhd" class="filmdyhd channel-btn focusable">Film 2 HD</button>
-              <button id="tringaction" class="tringaction channel-btn focusable">Tring MAX</button>
               <button id="tring3plus" class="tring3plus channel-btn focusable">Tring 3 Plus</button>
+              <button id="kanald" class="kanald channel-btn focusable">Kanal D</button>
+              <button id="artkino1" class="artkino1 channel-btn focusable">Art Kino 1</button>
+              <button id="artkino2" class="artkino3 channel-btn focusable">Art Kino 2</button>
+              <button id="artkino3" class="artkino3 channel-btn focusable">Art Kino 3</button>
+              <button id="expshkence" class="expshkence channel-btn focusable">EXP Shkencë</button>
+              <button id="exphistori" class="expshkence channel-btn focusable">EXP Histori</button>
+              <button id="expnatyre" class="expnatyre channel-btn focusable">EXP Natyrë</button>
+              <button id="scihd" class="scihd channel-btn focusable">Sci HD</button>
+              <button id="natgeo" class="natgeo channel-btn focusable">National Geographic</button>
               <button id="bangbang" class="bangbang channel-btn focusable">Bang Bang</button>
               <button id="cufo" class="cufo channel-btn focusable">Cufo</button>
-              <button id="tringtring" class="tringtring channel-btn focusable">Tring Tring</button>
+              <button id="juniortv" class="juniortv channel-btn focusable">Junior TV</button>
               <button id="tringjollyhd" class="tringjollyhd channel-btn focusable">Jolly HD</button>
-              <button id="thd" class="thd channel-btn focusable">T HD</button>
-              <button id="tringshqip" class="tringshqip channel-btn focusable">Tring Shqip</button>
             </div>
-            <div class="col-10 rp">
-              <div id="player" class="embed-responsive embed-responsive-16by9">
-                <div class="player embed-responsive-item">
-                  <iframe class="embed-responsive-item" scrolling="no" frameborder="0" marginwidth="0" marginheight="0" src="channels/syritv.html" allowfullscreen="1"></iframe>
+            <div class="tv-display">
+                <div id="player" class="embed-responsive embed-responsive-16by9">
+                  <div class="player embed-responsive-item">
+                    <iframe class="embed-responsive-item" scrolling="no" frameborder="0" marginwidth="0" marginheight="0" src="channels/syritv.html" allowfullscreen="1"></iframe>
+                  </div>
                 </div>
-              </div>
             </div>
         </div>
     </div>

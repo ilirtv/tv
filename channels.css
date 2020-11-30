@@ -1,5 +1,6 @@
 .tch{
-	background: url("img/tv/tch.png");
+	background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(204, 204, 204, 1) 100%) !important;
+	background: url("img/tv/tc.png");
 }
 
 .tch:hover{
