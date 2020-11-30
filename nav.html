@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>JavaScript SpatialNavigation Demo Page</title>
+
+    <link rel="stylesheet" href="https://luke-chang.github.io/js-spatial-navigation/demo/css/style_2.css">
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://luke-chang.github.io/js-spatial-navigation/spatial_navigation.js"></script>
+    <script src="https://luke-chang.github.io/js-spatial-navigation/demo/js/util.js"></script>
+    <script>
+      $(function() {
+        var SN = SpatialNavigation;
+
+        SN.init();
+
+        SN.add({
+          id: 'menu',
+          selector: '.leftbox .focusable',
+          enterTo: 'last-focused',
+
+          // The valid values are "none", "self-first" and "self-only".
+          //
+          // "none": nothing different from single section.
+          // "self-first": (default) elements in the same section will get
+          //               higher priority.
+          // "self-only": you won't jump out the current section.
+          restrict: 'none'
+        });
+
+        SN.add({
+          id: 'content',
+          selector: '.rightbox .focusable',
+          straightOnly: true,
+          straightOverlapThreshold: 0
+        });
+
+        SN.add({
+          id: 'sidebox',
+          selector: '#sidebox .focusable'
+        });
+
+        $('.leftbox .focusable')
+          .on('sn:enter-down', function() {
+            $('.leftbox .focusable')
+              .removeClass('checked')
+              .filter(this)
+              .addClass('checked');
+
+            $('.rightbox .content')
+              .removeClass('visible')
+              .filter('#content' + $(this).data('id'))
+              .addClass('visible');
+          });
+
+        $('#sidebox .focusable').on('sn:enter-down', function() {
+          $(this).find('input').click();
+          return false;
+        });
+
+        $('input[type="radio"]')
+          .click(function() {
+            var config = {};
+            config[$(this).prop('name')] = $(this).val();
+            SN.set('menu', config);
+          })
+          .filter('[value="none"]')
+          .click();
+
+        SN.makeFocusable();
+        SN.focus();
+      });
+    </script>
+  </head>
+  <body>
+    <div></div>
+      <div class="leftbox">
+        <div class="focusable checked" data-id="1">Item 1</div>
+        <div class="focusable" data-id="2">Item 2</div>
+        <div class="focusable" data-id="3">Item 3</div>
+        <div class="focusable" data-id="4">Item 4</div>
+        <div class="focusable" data-id="5">Item 5</div>
+        <div class="focusable" data-id="6">Item 6</div>
+        <div class="focusable" data-id="7">Item 7</div>
+        <div class="focusable" data-id="8">Item 8</div>
+        <div class="focusable" data-id="9">Item 9</div>
+        <div class="focusable" data-id="10">Item 10</div>
+      </div>
+    </div>
+
+  </body>
+</html>
