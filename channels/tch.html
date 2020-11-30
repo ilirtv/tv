@@ -15,6 +15,11 @@
 		var player = new Clappr.Player({
 		height: "100%",
 		width: "100%",
+		events: {
+		onError: function(e) {
+		setTimeout(function() { player.configure(player.options); }, 1000);
+			}
+		},
 		watermark: '',
 		position: 'top-right',
 		hlsjsConfig: {
@@ -34,7 +39,7 @@
 		mimeType: 'application/x-mpegURL'
 		});
 		player.play()
+		
 	</script>
-	<script src="index.js"></script>
 </body>
 </html>
