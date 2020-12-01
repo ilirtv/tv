@@ -20,12 +20,28 @@
     </script>
   </head>
   <body>
+    <div class="logo"><img src="img/logo-red.png" height="30" alt=""></div>
     <div class="leftbox" width="0">
       <div class="focusable" style="width: 1px !important; z-index: 999999999;" id="topV"></div>
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 channel-list leftbox" id="channelList">
+          <div class="col-12">
+
+            <div class="tv-display">
+              <div id="player" class="player embed-responsive embed-responsive-16by9">
+                <div class="embed-responsive-item">
+                  <iframe class="embed-responsive-item" scrolling="no" frameborder="0" marginwidth="0" marginheight="0" src="channels/syritv.html" allowfullscreen="1"></iframe>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 channel-list leftbox rp" id="channelList">
+              <div class="channel-list-head"><div class="channel-list-head-icon"></div></div>
               <button id="syritv" class="syritv channel-btn focusable">Syri TV</button>
               <button id="tch" class="tch channel-btn focusable">Top Channel</button>
               <button id="klan" class="klan channel-btn focusable">Klan HD</button>
@@ -86,13 +102,6 @@
               <button id="cufo" class="cufo channel-btn focusable">Cufo</button>
               <button id="juniortv" class="juniortv channel-btn focusable">Junior TV</button>
               <button id="tringjollyhd" class="tringjollyhd channel-btn focusable">Jolly HD</button>
-            </div>
-            <div class="tv-display">
-                <div id="player" class="embed-responsive embed-responsive-16by9">
-                  <div class="player embed-responsive-item">
-                    <iframe class="embed-responsive-item" scrolling="no" frameborder="0" marginwidth="0" marginheight="0" src="channels/syritv.html" allowfullscreen="1"></iframe>
-                  </div>
-                </div>
             </div>
         </div>
     </div>

@@ -1,6 +1,5 @@
 .tch{
-	background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(204, 204, 204, 1) 100%) !important;
-	background: url("img/tv/tc.png");
+	background: url("img/tv/tch.png");
 }
 
 .tch:hover{
@@ -21,6 +20,18 @@
 
 .news24{
 	background: url("img/tv/news24.png");
+}
+
+.faxnews{
+	background: url("img/tv/faxnews.png");
+}
+
+.a2cnn{
+	background: url("img/tv/a2cnn.png");
+}
+
+.orahd{
+	background: url("img/tv/orahd.png");
 }
 
 .oranews{
