@@ -4,7 +4,6 @@
 	<script src="https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js" type="text/javascript"></script>
 </head>
 <body>
-	<div class="logo"><img src="../img/logo-red.png" height="30" alt=""></div>
 	<div class="rightbox">
 		<button class="full-screen-button focusable" onclick="player.core.mediaControl.toggleFullscreen();"><img src="../img/fullscreen.png">Full Screen</button>
 	</div>
@@ -30,7 +29,7 @@
 		
 		player.attachTo(playerElement);
 		player.load({
-		source: window.atob("aHR0cHM6Ly90di5zeXJpLm5ldC9zeXJpbGl2ZS93ZWJ0di9wbGF5bGlzdC5tM3U4P3dtc0F1dGhTaWduPWMyVnlkbVZ5WDNScGJXVTlNVEF2TWpRdk1qQXhPQ0E1T2pReE9qQXpJRUZOSm1oaGMyaGZkbUZzZFdVOVJuaDRiV1E0VXpGUmFWaGtiMDlVUTBJd1YxUmlaejA5Sm5aaGJHbGtiV2x1ZFhSbGN6MHk="),
+		source: window.atob("aHR0cHM6Ly93ZWIub25haXItcmFkaW8uZXUvZXhwbG9yZWN5L2V4cGxvcmVjeS9wbGF5bGlzdC5tM3U4"),
 		mimeType: 'application/x-mpegURL'
 		});
 		player.play()
